@@ -11,11 +11,15 @@ git config --global url."git@github.com:DataDog".insteadOf "https://github.com/D
 echo "copying dot files"
 cp ~/dotfiles/.zshrc ~/.zshrc
 cp -fR ~/dotfiles/.claude ~/
+cp ~/dotfiles/.claude.json ~/
 
 echo "configuring git"
 git config --global user.name "Tony Park"
 git config --global user.email "tony.park@datadoghq.com"
 git config --global pull.rebase true
+
+echo "installing crane"
+go install github.com/google/go-containerregistry/cmd/crane@latest
 
 echo "docker helper"
 ddtool docker install-helper
