@@ -1,0 +1,7 @@
+[user]
+	name = Tony Park
+	email = tony.park@datadoghq.com
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[pull]
+	rebase = true
